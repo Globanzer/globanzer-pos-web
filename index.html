@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Globanzer POS — Tu negocio, a un mensaje de distancia</title>
   <meta name="description" content="Globanzer POS: punto de venta e inventario para tu tienda en Venezuela. Manejas tu negocio escribiéndole a Banzi, tu asistente con IA, desde el teléfono. Precios en USD y bolívares con la tasa BCV del día.">
-  <meta name="theme-color" content="#070B18">
+  <meta name="theme-color" content="#0B0D12">
   <link rel="icon" type="image/png" href="assets/img/logo.png">
   <link rel="apple-touch-icon" href="assets/img/logo.png">
 
@@ -14,12 +14,13 @@
   <meta property="og:site_name" content="Globanzer POS">
   <meta property="og:title" content="Globanzer POS — Tu negocio, a un mensaje de distancia">
   <meta property="og:description" content="Escríbele a tu asistente con IA. Así de simple. Inventario, ventas, fiado y cierre de caja desde tu teléfono.">
-  <meta property="og:image" content="assets/img/tienda.jpg">
+  <meta property="og:image" content="assets/img/foto_tienda.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="preload" as="image" href="assets/img/foto_tienda.jpg" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -41,19 +42,23 @@
           <li><a href="#precios">Precios</a></li>
         </ul>
       </nav>
-      <a class="btn btn-wa btn-sm" href="https://wa.me/584245927067" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
-        <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
-        <span class="hide-sm">Escríbenos por WhatsApp</span><span class="show-sm">WhatsApp</span>
-      </a>
+      <div class="header-ctas">
+        <a class="btn btn-ghost btn-sm btn-ficha" href="formulario.html">Ficha en línea</a>
+        <a class="btn btn-wa btn-sm" href="https://wa.me/584245927067" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+          <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
     </div>
   </header>
 
   <main id="contenido">
 
     <!-- ============ HERO ============ -->
-    <section class="hero" id="hero" aria-labelledby="hero-title">
-      <div class="bg-orb orb-a" aria-hidden="true"></div>
-      <div class="bg-orb orb-b" aria-hidden="true"></div>
+    <section class="hero photo-sec" id="hero" aria-labelledby="hero-title">
+      <div class="photo-bg">
+        <img src="assets/img/foto_tienda.jpg" alt="Dueño de una tienda de repuestos sonriendo mientras revisa su teléfono detrás del mostrador" width="1376" height="768" fetchpriority="high" decoding="async">
+      </div>
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Punto de venta + inventario para tu tienda</p>
@@ -73,10 +78,6 @@
         </div>
 
         <div class="hero-visual">
-          <div class="hero-float" aria-hidden="true">
-            <img src="assets/img/logo.png" alt="" width="400" height="400" class="blend float-logo">
-          </div>
-
           <div class="phone" role="img" aria-label="Ejemplo de conversación con Banzi en el teléfono: el dueño pregunta cuánto vendió hoy, Banzi responde 312,40 USD en 18 ventas; luego anota un fiado de Pedro por 24,00 USD y lo guarda solo cuando el dueño dice sí.">
             <div class="phone-frame">
               <div class="phone-notch"></div>
@@ -107,13 +108,11 @@
     </section>
 
     <!-- ============ CÓMO FUNCIONA ============ -->
-    <section class="how" id="como-funciona" aria-labelledby="how-title">
+    <section class="how photo-sec" id="como-funciona" aria-labelledby="how-title">
+      <div class="photo-bg">
+        <img src="assets/img/foto_factura.jpg" alt="Manos de un comerciante tomando con el teléfono una foto a una factura de papel sobre un mesón de madera" width="1376" height="768" loading="lazy" decoding="async">
+      </div>
       <div class="wrap how-grid">
-        <div class="how-visual">
-          <div class="stage">
-            <img src="assets/img/factura.jpg" alt="Teléfono con un chat; una factura de papel se transforma en cubos de datos" width="900" height="900" loading="lazy" decoding="async" class="blend how-img">
-          </div>
-        </div>
         <div class="how-copy">
           <p class="eyebrow">Cómo funciona</p>
           <h2 id="how-title">Sube inventario con una foto</h2>
@@ -178,12 +177,12 @@
     </section>
 
     <!-- ============ LA CAJA ============ -->
-    <section class="register" id="caja" aria-labelledby="caja-title">
+    <section class="register photo-sec" id="caja" aria-labelledby="caja-title">
+      <div class="photo-bg">
+        <img src="assets/img/foto_caja.jpg" alt="Cajera de una tienda de repuestos cobrándole a un cliente con tarjeta en el punto, junto a la caja con pantalla táctil" width="1376" height="768" loading="lazy" decoding="async">
+      </div>
       <div class="wrap register-grid">
         <div class="register-visual">
-          <div class="parallax-box">
-            <img src="assets/img/tienda.jpg" alt="Mostrador de una tienda de repuestos con el punto de venta en una computadora" width="900" height="900" loading="lazy" decoding="async" class="blend shop-img">
-          </div>
           <div class="ticket" aria-hidden="true">
             <small>Caja 1</small>
             <p class="t-row"><span>Total</span><b>24,00 USD</b></p>
@@ -297,19 +296,19 @@
       <div class="wrap">
         <div class="start-box">
           <h2 id="start-title">Empieza hoy</h2>
-          <p class="sub">Descarga la ficha, llénala con los datos de tu negocio y envíanosla. Te acompañamos en todo el proceso.</p>
+          <p class="sub">Llena la ficha de instalación con los datos de tu negocio y te escribimos por WhatsApp. Te acompañamos en todo el proceso.</p>
           <div class="cta-row center">
-            <a class="btn btn-primary" href="assets/ficha-instalacion-globanzer-pos.pdf" download>
-              <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Descarga la ficha de instalación
+            <a class="btn btn-primary" href="formulario.html">
+              <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><path d="M9 4h6M9 4a1 1 0 00-1 1v1h8V5a1 1 0 00-1-1M8 6H6a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V7a1 1 0 00-1-1h-2M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Llena la ficha en línea
             </a>
-            <a class="btn btn-wa" href="https://wa.me/584245927067" target="_blank" rel="noopener">
-              <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
-              Escríbenos por WhatsApp
+            <a class="btn btn-ghost" href="assets/ficha-instalacion-globanzer-pos.pdf" download>
+              <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Descarga la ficha en PDF
             </a>
           </div>
-          <p class="mail">o escríbenos a <a href="mailto:pos@globanzer.com">pos@globanzer.com</a></p>
-          <p class="pdf-note">Ficha en PDF · 200 KB</p>
+          <p class="mail">¿Dudas? Escríbenos por <a href="https://wa.me/584245927067" target="_blank" rel="noopener">WhatsApp</a> o a <a href="mailto:pos@globanzer.com">pos@globanzer.com</a></p>
+          <p class="pdf-note">La ficha en PDF (200 KB) es para quien prefiera imprimirla.</p>
         </div>
       </div>
     </section>

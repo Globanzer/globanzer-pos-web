@@ -82,6 +82,15 @@
     };
   }
 
+  /* ---------- Photo backgrounds: subtle scroll parallax ---------- */
+  function parallax(sel) {
+    var box = $(sel);
+    if (!box) return;
+    var img = $("img", box);
+    gsap.fromTo(img, { yPercent: -6 }, { yPercent: 6, ease: "none",
+      scrollTrigger: { trigger: box, start: "top bottom", end: "bottom top", scrub: true } });
+  }
+
   var mm = gsap.matchMedia();
 
   mm.add({
@@ -117,11 +126,11 @@
     // phone settles into place as the chat plays
     chatTl.fromTo(".phone", { rotationY: -22, rotationX: 8, y: 20 }, { rotationY: 0, rotationX: 0, y: 0, duration: 2, ease: "none" }, 0);
     cleanups.push(buildChat(chatTl));
-    gsap.to(".hero-float", {
-      yPercent: -25, rotationY: 30, rotationZ: 8, ease: "none",
-      scrollTrigger: { start: 0, end: c.desktop ? "+=1600" : "+=900", scrub: true }
+    // hero photo: slow drift + gentle zoom-out while the chat plays
+    gsap.fromTo(".hero .photo-bg img", { yPercent: -4, scale: 1.08 }, {
+      yPercent: 5, scale: 1, ease: "none",
+      scrollTrigger: { start: 0, end: c.desktop ? "+=1600" : "+=600", scrub: true }
     });
-    gsap.to(".orb-a", { yPercent: 60, ease: "none", scrollTrigger: { start: 0, end: c.desktop ? "+=1600" : "+=900", scrub: true } });
 
     if (c.desktop && c.finePointer) {
       cleanups.push(addTilt($(".phone-frame"), 14));
@@ -146,16 +155,13 @@
           onLeaveBack: function () { setStep(0); }
         }
       });
-      howTl.fromTo(".how-img",
-        { rotationY: -38, rotationX: 14, scale: 0.85 },
-        { rotationY: 28, rotationX: -6, scale: 1.05, ease: "none", duration: 3 }, 0);
+      howTl.fromTo(".how .photo-bg img",
+        { scale: 1.12, yPercent: -4 },
+        { scale: 1, yPercent: 4, ease: "none", duration: 3 }, 0);
       howTl.fromTo(steps, { autoAlpha: 0.35, x: 20 }, { autoAlpha: 1, x: 0, stagger: 1, duration: 0.6 }, 0);
       setStep(0);
     } else {
-      gsap.fromTo(".how-img",
-        { rotationY: -32, rotationX: 12, scale: 0.88 },
-        { rotationY: 20, rotationX: -4, scale: 1, ease: "none",
-          scrollTrigger: { trigger: ".how-visual", start: "top 90%", end: "bottom 10%", scrub: true } });
+      parallax(".how .photo-bg");
       steps.forEach(function (s, i) {
         ScrollTrigger.create({
           trigger: s, start: "top 75%", end: "bottom 35%",
@@ -186,11 +192,8 @@
     });
 
     /* ===== La caja: parallax ===== */
-    gsap.fromTo(".shop-img",
-      { yPercent: 8, rotationY: 14, rotationX: 6 },
-      { yPercent: -8, rotationY: -10, rotationX: -2, ease: "none",
-        scrollTrigger: { trigger: ".register", start: "top bottom", end: "bottom top", scrub: true } });
-    gsap.fromTo(".ticket", { y: 60 }, { y: -40, ease: "none",
+    parallax(".register .photo-bg");
+    gsap.fromTo(".ticket", { y: 40 }, { y: -30, ease: "none",
       scrollTrigger: { trigger: ".register", start: "top bottom", end: "bottom top", scrub: true } });
     gsap.from(".chips li", { scale: 0.6, autoAlpha: 0, stagger: 0.06, duration: 0.4, ease: "back.out(2)", clearProps: "transform",
       scrollTrigger: { trigger: ".chips", start: "top 90%" } });

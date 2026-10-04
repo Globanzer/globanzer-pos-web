@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ficha de instalación en línea — Globanzer POS</title>
+  <meta name="description" content="Llena en línea la ficha de instalación de Globanzer POS con los datos de tu negocio. Te escribimos por WhatsApp para coordinar la instalación.">
+  <meta name="theme-color" content="#0B0D12">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="apple-touch-icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Globanzer POS, ir al inicio">
+        <img src="assets/img/logo.png" alt="" width="40" height="40">
+        <span>Globanzer <b>POS</b></span>
+      </a>
+      <a class="btn btn-wa btn-sm" href="https://wa.me/584245927067" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+        <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="contenido" class="form-page">
+    <div class="wrap form-wrap">
+      <a class="back-link" href="index.html">← Volver al inicio</a>
+      <h1>Ficha de instalación</h1>
+      <p class="form-intro">Llena los datos de tu negocio para preparar tu instalación. Te toma unos minutos. Los campos con <span class="req-mark" aria-hidden="true">*</span> son obligatorios.</p>
+
+      <div class="callout" role="note">
+        <p><strong>Requisitos del servicio:</strong> internet en el negocio y la aplicación Discord en el teléfono del dueño.</p>
+        <p><strong>Fotos y archivos:</strong> las fotos del RIF, el logo y la providencia nos las mandas por WhatsApp al <a href="https://wa.me/584245927067" target="_blank" rel="noopener">+58 424-592 7067</a>.</p>
+      </div>
+
+      <div id="form-success" class="form-success" tabindex="-1" hidden>
+        <div class="ok-ico" aria-hidden="true">✓</div>
+        <h2>Recibimos tu ficha.</h2>
+        <p>Te escribiremos por WhatsApp.</p>
+        <p>Recuerda mandarnos por WhatsApp las fotos del RIF y, si aplica, el logo y la providencia.</p>
+        <div class="cta-row center">
+          <a class="btn btn-wa" href="https://wa.me/584245927067" target="_blank" rel="noopener">
+            <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+            Mandar las fotos por WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="index.html">Volver al inicio</a>
+        </div>
+      </div>
+
+      <form id="ficha" novalidate>
+        <div id="form-errors" class="form-alert is-error" tabindex="-1" role="alert" hidden></div>
+
+        <!-- ================= A ================= -->
+        <fieldset class="fsec">
+          <legend><span class="sec-letter" aria-hidden="true">A</span>El negocio</legend>
+          <div class="fsec-body">
+            <div class="q field">
+              <label for="razon_social"><span class="qn">1.</span>Razón social (como aparece en el RIF)<span class="req-mark" aria-hidden="true">*</span></label>
+              <input class="input" id="razon_social" name="razon_social" type="text" autocomplete="organization" maxlength="200" required aria-describedby="razon_social-err">
+              <span class="err" id="razon_social-err"></span>
+            </div>
+            <div class="q field">
+              <label for="rif"><span class="qn">2.</span>RIF<span class="req-mark" aria-hidden="true">*</span></label>
+              <span class="hint" id="rif-hint">Ejemplo: J-12345678-9. La foto del RIF nos la mandas por WhatsApp.</span>
+              <input class="input" id="rif" name="rif" type="text" maxlength="20" autocapitalize="characters" required aria-describedby="rif-hint rif-err">
+              <span class="err" id="rif-err"></span>
+            </div>
+            <div class="q field">
+              <label for="nombre_comercial"><span class="qn">3.</span>Nombre comercial para el ticket<span class="req-mark" aria-hidden="true">*</span></label>
+              <input class="input" id="nombre_comercial" name="nombre_comercial" type="text" maxlength="120" required aria-describedby="nombre_comercial-err">
+              <span class="err" id="nombre_comercial-err"></span>
+            </div>
+            <div class="q field">
+              <label for="direccion"><span class="qn">4.</span>Dirección fiscal<span class="req-mark" aria-hidden="true">*</span></label>
+              <textarea class="textarea" id="direccion" name="direccion" maxlength="400" rows="3" autocomplete="street-address" required aria-describedby="direccion-err"></textarea>
+              <span class="err" id="direccion-err"></span>
+            </div>
+            <div class="q">
+              <span class="q-label" id="q5"><span class="qn">5.</span>Teléfono y correo del negocio<span class="req-mark" aria-hidden="true">*</span></span>
+              <div class="grid-2">
+                <div class="field">
+                  <label for="telefono_negocio">Teléfono</label>
+                  <input class="input" id="telefono_negocio" name="telefono_negocio" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" placeholder="0414-1234567" required aria-describedby="telefono_negocio-err">
+                  <span class="err" id="telefono_negocio-err"></span>
+                </div>
+                <div class="field">
+                  <label for="correo_negocio">Correo</label>
+                  <input class="input" id="correo_negocio" name="correo_negocio" type="email" inputmode="email" autocomplete="email" maxlength="120" required aria-describedby="correo_negocio-err">
+                  <span class="err" id="correo_negocio-err"></span>
+                </div>
+              </div>
+            </div>
+            <fieldset class="q">
+              <legend><span class="qn">6.</span>Logo para el ticket</legend>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="logo" value="Sí">Sí (nos lo mandas por WhatsApp)</label>
+                <label class="opt"><input type="radio" name="logo" value="No">No</label>
+              </div>
+            </fieldset>
+            <fieldset class="q">
+              <legend><span class="qn">7.</span>¿Eres contribuyente especial del SENIAT?</legend>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="contribuyente_especial" value="No">No</label>
+                <label class="opt"><input type="radio" name="contribuyente_especial" value="Sí">Sí (nos mandas por WhatsApp la providencia que te designa)</label>
+              </div>
+            </fieldset>
+            <fieldset class="q">
+              <legend><span class="qn">8.</span>¿Cobras en divisas en efectivo o fuera del banco?</legend>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="divisas_efectivo" value="No">No</label>
+                <label class="opt"><input type="radio" name="divisas_efectivo" value="Sí">Sí</label>
+              </div>
+            </fieldset>
+          </div>
+        </fieldset>
+
+        <!-- ================= B ================= -->
+        <fieldset class="fsec">
+          <legend><span class="sec-letter" aria-hidden="true">B</span>Tiendas y cajas</legend>
+          <div class="fsec-body">
+            <fieldset class="q">
+              <legend><span class="qn">9.</span>¿Cuántas tiendas tienes?</legend>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="tiendas" value="1">1</label>
+                <label class="opt"><input type="radio" name="tiendas" value="2">2</label>
+                <label class="opt"><input type="radio" name="tiendas" value="Más">Más</label>
+              </div>
+              <div class="cond field" data-show-when="tiendas=Más" hidden>
+                <label for="tiendas_cuantas">¿Cuántas?</label>
+                <input class="input" id="tiendas_cuantas" name="tiendas_cuantas" type="text" inputmode="numeric" maxlength="10">
+              </div>
+            </fieldset>
+            <fieldset class="q">
+              <legend><span class="qn">10.</span>Por cada tienda adicional: nombre, dirección y su inventario</legend>
+              <div class="opts stack">
+                <label class="opt"><input type="checkbox" name="tienda_adicional_tipo" value="Comparte el inventario de la principal">Comparte el inventario de la principal (cuenta como caja adicional)</label>
+                <label class="opt"><input type="checkbox" name="tienda_adicional_tipo" value="Tiene inventario propio (sucursal)">Tiene inventario propio (es una sucursal)</label>
+              </div>
+              <div class="field">
+                <label for="tiendas_adicionales">Nombre y dirección de cada tienda adicional</label>
+                <textarea class="textarea" id="tiendas_adicionales" name="tiendas_adicionales" maxlength="800" rows="3" placeholder="Ej.: Repuestos El Centro, Av. Bolívar, local 4 — inventario propio"></textarea>
+              </div>
+            </fieldset>
+            <div class="q field">
+              <label for="cajas"><span class="qn">11.</span>Cajas en cada tienda, con su nombre</label>
+              <span class="hint" id="cajas-hint">Ej.: Mostrador 1, Mostrador 2</span>
+              <textarea class="textarea" id="cajas" name="cajas" maxlength="600" rows="2" aria-describedby="cajas-hint cajas-note"></textarea>
+              <p class="q-note" id="cajas-note">La mensualidad incluye hasta dos cajas. Desde la 3.ª, 30 USD al mes cada una. Sucursal: 300 USD de instalación y 120 USD al mes, con sus dos cajas.</p>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- ================= C ================= -->
+        <fieldset class="fsec">
+          <legend><span class="sec-letter" aria-hidden="true">C</span>Personas</legend>
+          <div class="fsec-body">
+            <div class="q">
+              <span class="q-label"><span class="qn">12.</span>Dueño</span>
+              <div class="field">
+                <label for="dueno_nombre">Nombre completo<span class="req-mark" aria-hidden="true">*</span></label>
+                <input class="input" id="dueno_nombre" name="dueno_nombre" type="text" autocomplete="name" maxlength="120" required aria-describedby="dueno_nombre-err">
+                <span class="err" id="dueno_nombre-err"></span>
+              </div>
+              <div class="grid-2" style="margin-top:.75rem">
+                <div class="field">
+                  <label for="dueno_telefono">Teléfono<span class="req-mark" aria-hidden="true">*</span></label>
+                  <input class="input" id="dueno_telefono" name="dueno_telefono" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" placeholder="0414-1234567" required aria-describedby="dueno_telefono-err">
+                  <span class="err" id="dueno_telefono-err"></span>
+                </div>
+                <div class="field">
+                  <label for="dueno_correo">Correo (para entrar al sistema)<span class="req-mark" aria-hidden="true">*</span></label>
+                  <input class="input" id="dueno_correo" name="dueno_correo" type="email" inputmode="email" autocomplete="email" maxlength="120" required aria-describedby="dueno_correo-err">
+                  <span class="err" id="dueno_correo-err"></span>
+                </div>
+              </div>
+              <div class="field">
+                <label for="dueno_discord">Usuario de Discord<span class="req-mark" aria-hidden="true">*</span></label>
+                <input class="input" id="dueno_discord" name="dueno_discord" type="text" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="40" required aria-describedby="dueno_discord-err">
+                <span class="err" id="dueno_discord-err"></span>
+              </div>
+            </div>
+            <fieldset class="q">
+              <legend><span class="qn">13.</span>¿Otra persona hablará con el asistente?</legend>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="otra_persona" value="No">No</label>
+                <label class="opt"><input type="radio" name="otra_persona" value="Sí">Sí</label>
+              </div>
+              <div class="cond" data-show-when="otra_persona=Sí" hidden>
+                <div class="field">
+                  <label for="otra_nombre_telefono">Nombre y teléfono</label>
+                  <input class="input" id="otra_nombre_telefono" name="otra_nombre_telefono" type="text" maxlength="160">
+                </div>
+                <div class="field">
+                  <label for="otra_discord">Usuario de Discord</label>
+                  <input class="input" id="otra_discord" name="otra_discord" type="text" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="40">
+                </div>
+                <fieldset class="field" style="border:0;padding:0;margin-inline:0">
+                  <legend style="font-weight:600;color:var(--muted);font-size:.95rem;margin-bottom:.4rem;padding:0">Nivel</legend>
+                  <div class="opts stack">
+                    <label class="opt"><input type="radio" name="otra_nivel" value="Encargado (solo consultas)">Encargado (solo consultas)</label>
+                    <label class="opt"><input type="radio" name="otra_nivel" value="Dueño (todo, siempre con confirmación)">Dueño (todo, siempre con confirmación)</label>
+                  </div>
+                </fieldset>
+              </div>
+            </fieldset>
+            <div class="q">
+              <span class="q-label" id="q14"><span class="qn">14.</span>Cajeros: nombre, correo, caja y qué puede hacer</span>
+              <span class="hint">Puedes agregar hasta 6 cajeros.</span>
+              <div class="cashiers" id="cashiers"></div>
+              <button type="button" class="btn btn-ghost btn-sm add-btn" id="add-cashier">+ Agregar cajero</button>
+              <template id="cashier-tpl">
+                <fieldset class="cashier" style="margin:0">
+                  <legend class="cashier-head" style="width:100%;padding:0;float:left"><b>Cajero <span data-n></span></b></legend>
+                  <div style="clear:both" class="grid-2">
+                    <div class="field">
+                      <label data-for="nombre">Nombre</label>
+                      <input class="input" data-k="nombre" type="text" maxlength="120" autocomplete="off">
+                    </div>
+                    <div class="field">
+                      <label data-for="correo">Correo</label>
+                      <input class="input" data-k="correo" type="email" inputmode="email" maxlength="120" autocomplete="off">
+                      <span class="err" data-err="correo"></span>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label data-for="caja">Caja</label>
+                    <input class="input" data-k="caja" type="text" maxlength="60" placeholder="Ej.: Mostrador 1" autocomplete="off">
+                  </div>
+                  <p class="perm-title">Puede:</p>
+                  <div class="opts">
+                    <label class="opt"><input type="checkbox" data-k="anular">Anular ventas</label>
+                    <label class="opt"><input type="checkbox" data-k="descuentos">Dar descuentos en caja</label>
+                    <label class="opt"><input type="checkbox" data-k="cerrar">Cerrar la caja</label>
+                  </div>
+                  <button type="button" class="link-btn" data-remove>Quitar este cajero</button>
+                </fieldset>
+              </template>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- ================= D ================= -->
+        <fieldset class="fsec">
+          <legend><span class="sec-letter" aria-hidden="true">D</span>Cobros</legend>
+          <div class="fsec-body">
+            <div class="q">
+              <div class="field">
+                <label for="recibo_nombre"><span class="qn">15.</span>Recibo de tu mensualidad: ¿a nombre de quién (razón social y RIF)?</label>
+                <input class="input" id="recibo_nombre" name="recibo_nombre" type="text" maxlength="200">
+              </div>
+              <fieldset class="field" style="border:0;padding:0;margin-inline:0;margin-top:1rem">
+                <legend style="font-weight:600;color:var(--muted);font-size:.95rem;margin-bottom:.4rem;padding:0">¿Cómo pagarás?</legend>
+                <div class="opts">
+                  <label class="opt"><input type="radio" name="forma_pago" value="Bolívares (tasa euro del BCV)">Bolívares (tasa euro del BCV)</label>
+                  <label class="opt"><input type="radio" name="forma_pago" value="Dólares en efectivo">Dólares en efectivo</label>
+                  <label class="opt"><input type="radio" name="forma_pago" value="USDT por Binance">USDT por Binance</label>
+                  <label class="opt"><input type="radio" name="forma_pago" value="Banesco Panamá">Banesco Panamá</label>
+                </div>
+              </fieldset>
+              <p class="q-note">Tu sistema trae listos todos los métodos de cobro (efectivo, dólares en efectivo, punto, pago móvil, transferencia y bio pago) y el fiado; usas los que te sirvan.</p>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- ================= E ================= -->
+        <fieldset class="fsec">
+          <legend><span class="sec-letter" aria-hidden="true">E</span>Productos</legend>
+          <div class="fsec-body">
+            <fieldset class="q">
+              <legend><span class="qn">16.</span>¿Cuántos productos manejas, más o menos?</legend>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="productos_cantidad" value="Menos de 200">Menos de 200</label>
+                <label class="opt"><input type="radio" name="productos_cantidad" value="200 a 1.000">200 a 1.000</label>
+                <label class="opt"><input type="radio" name="productos_cantidad" value="1.000 a 5.000">1.000 a 5.000</label>
+                <label class="opt"><input type="radio" name="productos_cantidad" value="Más de 5.000">Más de 5.000</label>
+              </div>
+            </fieldset>
+            <fieldset class="q">
+              <legend><span class="qn">17.</span>¿Cómo nos das el catálogo?</legend>
+              <div class="opts stack">
+                <label class="opt"><input type="radio" name="catalogo" value="Nuestra plantilla de Excel">Nuestra plantilla de Excel</label>
+                <label class="opt"><input type="radio" name="catalogo" value="Fotos">Fotos</label>
+                <label class="opt"><input type="radio" name="catalogo" value="Lo cargo yo con el asistente">Lo cargo yo con el asistente</label>
+                <label class="opt"><input type="radio" name="catalogo" value="Exportado de mi sistema actual">Exportado de mi sistema actual</label>
+              </div>
+              <div class="cond field" data-show-when="catalogo=Exportado de mi sistema actual" hidden>
+                <label for="catalogo_sistema">¿Cuál sistema?</label>
+                <input class="input" id="catalogo_sistema" name="catalogo_sistema" type="text" maxlength="80">
+              </div>
+            </fieldset>
+            <fieldset class="q">
+              <legend><span class="qn">18.</span>Tus precios están en</legend>
+              <div class="opts stack">
+                <label class="opt"><input type="radio" name="precios_moneda" value="Dólares">Dólares</label>
+                <label class="opt"><input type="radio" name="precios_moneda" value="Bolívares">Bolívares (se convierten con la tasa del BCV del día)</label>
+              </div>
+            </fieldset>
+            <fieldset class="q">
+              <legend><span class="qn">19.</span>Productos exentos de IVA</legend>
+              <div class="opts stack">
+                <label class="opt"><input type="radio" name="exentos_iva" value="No tengo">No tengo</label>
+                <label class="opt"><input type="radio" name="exentos_iva" value="Sí">Sí (márcalos en la plantilla o lístalos)</label>
+              </div>
+              <div class="cond field" data-show-when="exentos_iva=Sí" hidden>
+                <label for="exentos_lista">Lista de productos exentos (opcional)</label>
+                <textarea class="textarea" id="exentos_lista" name="exentos_lista" maxlength="800" rows="3"></textarea>
+              </div>
+            </fieldset>
+            <fieldset class="q">
+              <legend><span class="qn">20.</span>¿Sabes cuántas unidades tienes de cada producto?</legend>
+              <div class="opts stack">
+                <label class="opt"><input type="radio" name="existencias" value="Sí, vienen en el catálogo">Sí, vienen en el catálogo</label>
+                <label class="opt"><input type="radio" name="existencias" value="No, haremos un conteo">No, haremos un conteo</label>
+              </div>
+              <div class="cond field" data-show-when="existencias=No, haremos un conteo" hidden>
+                <label for="conteo_fecha">Fecha del conteo</label>
+                <input class="input" id="conteo_fecha" name="conteo_fecha" type="date">
+              </div>
+            </fieldset>
+          </div>
+        </fieldset>
+
+        <!-- ================= F ================= -->
+        <fieldset class="fsec">
+          <legend><span class="sec-letter" aria-hidden="true">F</span>Equipos</legend>
+          <div class="fsec-body">
+            <div class="q field">
+              <label for="computadoras"><span class="qn">21.</span>Computadoras por caja (Windows, Mac u otro, y navegador)</label>
+              <textarea class="textarea" id="computadoras" name="computadoras" maxlength="400" rows="2" placeholder="Ej.: Mostrador 1: Windows 10 con Chrome"></textarea>
+            </div>
+            <fieldset class="q">
+              <legend><span class="qn">22.</span>Impresora de tickets</legend>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="impresora" value="No">No</label>
+                <label class="opt"><input type="radio" name="impresora" value="Sí">Sí</label>
+              </div>
+              <div class="cond" data-show-when="impresora=Sí" hidden>
+                <div class="field">
+                  <label for="impresora_modelo">Marca y modelo</label>
+                  <input class="input" id="impresora_modelo" name="impresora_modelo" type="text" maxlength="80">
+                </div>
+                <fieldset class="field" style="border:0;padding:0;margin-inline:0">
+                  <legend style="font-weight:600;color:var(--muted);font-size:.95rem;margin-bottom:.4rem;padding:0">Papel</legend>
+                  <div class="opts">
+                    <label class="opt"><input type="radio" name="impresora_papel" value="58 mm">58 mm</label>
+                    <label class="opt"><input type="radio" name="impresora_papel" value="80 mm">80 mm</label>
+                  </div>
+                </fieldset>
+              </div>
+            </fieldset>
+            <fieldset class="q">
+              <legend><span class="qn">23.</span>Lector de códigos de barras</legend>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="lector_barras" value="No">No</label>
+                <label class="opt"><input type="radio" name="lector_barras" value="Sí">Sí</label>
+              </div>
+            </fieldset>
+            <fieldset class="q">
+              <legend><span class="qn">24.</span>Máquina fiscal <span class="hint" style="display:inline;margin:0">(referencia; la conexión NO está incluida)</span></legend>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="maquina_fiscal" value="No">No</label>
+                <label class="opt"><input type="radio" name="maquina_fiscal" value="Sí">Sí</label>
+              </div>
+              <div class="cond field" data-show-when="maquina_fiscal=Sí" hidden>
+                <label for="maquina_fiscal_modelo">Marca y modelo</label>
+                <input class="input" id="maquina_fiscal_modelo" name="maquina_fiscal_modelo" type="text" maxlength="80">
+              </div>
+            </fieldset>
+          </div>
+        </fieldset>
+
+        <!-- ================= G ================= -->
+        <fieldset class="fsec">
+          <legend><span class="sec-letter" aria-hidden="true">G</span>Servicio</legend>
+          <div class="fsec-body">
+            <fieldset class="q notice" id="q-respaldo">
+              <legend><span class="qn">25.</span>Respaldo semanal automático (20 USD al mes)<span class="req-mark" aria-hidden="true">*</span></legend>
+              <div class="opts" id="respaldo-opts" aria-describedby="respaldo-err">
+                <label class="opt"><input type="radio" id="respaldo_si" name="respaldo" value="Sí" required>Sí</label>
+                <label class="opt"><input type="radio" name="respaldo" value="No">No</label>
+              </div>
+              <span class="err" id="respaldo-err"></span>
+              <div class="cond" data-show-when="respaldo=No" hidden>
+                <label class="opt ack"><input type="checkbox" id="respaldo_riesgo" name="respaldo_riesgo" value="Entendido" aria-describedby="respaldo_riesgo-err"><span>Entiendo que, si el servidor falla, puedo perder mis datos.<span class="req-mark" aria-hidden="true">*</span></span></label>
+                <span class="err" id="respaldo_riesgo-err"></span>
+              </div>
+            </fieldset>
+            <div class="q field">
+              <label for="horario"><span class="qn">26.</span>Horario de tu negocio</label>
+              <span class="hint" id="horario-hint">El mantenimiento se hace fuera de ese horario.</span>
+              <input class="input" id="horario" name="horario" type="text" maxlength="160" placeholder="Ej.: lunes a sábado, 8:00 a. m. a 6:00 p. m." aria-describedby="horario-hint">
+            </div>
+            <fieldset class="q notice">
+              <legend><span class="qn">27.</span>Uso del asistente incluido<span class="req-mark" aria-hidden="true">*</span></legend>
+              <p class="q-note" style="margin:0 0 .6rem" id="uso-note">Uso del asistente incluido: hasta 500 mensajes al mes, de los cuales hasta 150 pueden ser fotos, notas de voz o archivos. Paquete extra: 250 mensajes por 10 USD. Detalle en el punto 6 de los <a href="terminos.html#t6" target="_blank" rel="noopener" style="color:#fff">Términos del servicio</a>.</p>
+              <label class="opt ack"><input type="checkbox" id="uso_asistente" name="uso_asistente" value="Entendido" aria-describedby="uso-note uso_asistente-err"><span>Entendido</span></label>
+              <span class="err" id="uso_asistente-err"></span>
+            </fieldset>
+            <fieldset class="q notice">
+              <legend><span class="qn">28.</span>Globanzer POS y tu asistente nunca te pedirán contraseñas ni códigos. Si alguien te los pide, es un engaño.<span class="req-mark" aria-hidden="true">*</span></legend>
+              <label class="opt ack"><input type="checkbox" id="seguridad" name="seguridad" value="Entendido" aria-describedby="seguridad-err"><span>Entendido</span></label>
+              <span class="err" id="seguridad-err"></span>
+            </fieldset>
+          </div>
+        </fieldset>
+
+        <!-- ================= Declaración ================= -->
+        <section class="declaration" aria-labelledby="decl-title">
+          <h2 id="decl-title">Declaración</h2>
+          <div class="grid-2">
+            <div class="field">
+              <label for="fecha">Fecha</label>
+              <input class="input" id="fecha" name="fecha" type="date">
+            </div>
+            <div class="field">
+              <label for="declarante">Nombre del dueño</label>
+              <input class="input" id="declarante" name="declarante" type="text" autocomplete="name" maxlength="120">
+            </div>
+          </div>
+          <div style="margin-top:1rem">
+            <label class="opt ack"><input type="checkbox" id="declaracion" name="declaracion" value="Acepto" aria-describedby="declaracion-err"><span>Declaro que los datos de esta ficha son correctos y que leí los puntos 25, 27 y 28.<span class="req-mark" aria-hidden="true">*</span></span></label>
+            <span class="err" id="declaracion-err"></span>
+          </div>
+          <p class="legal-accept">Al enviar esta ficha aceptas los <a href="terminos.html" target="_blank" rel="noopener">Términos del servicio</a> y la <a href="privacidad.html" target="_blank" rel="noopener">Política de privacidad</a>.</p>
+
+          <div class="turnstile-box" id="turnstile" data-sitekey="__TURNSTILE_SITE_KEY__"></div>
+          <span class="err" id="turnstile-err"></span>
+
+          <div class="submit-row">
+            <button class="btn btn-primary" type="submit" id="submit-btn">
+              <span class="spinner" aria-hidden="true"></span>
+              <span class="btn-label">Enviar ficha</span>
+            </button>
+          </div>
+          <div id="send-error" class="form-alert is-error" tabindex="-1" role="alert" hidden>
+            <h2>No pudimos enviar tu ficha</h2>
+            <p id="send-error-msg">Hubo un problema de conexión. Tus datos siguen en esta página: intenta de nuevo en un momento o escríbenos por WhatsApp y te ayudamos.</p>
+            <a class="btn btn-wa" href="https://wa.me/584245927067?text=Hola%2C%20quiero%20enviar%20mi%20ficha%20de%20instalaci%C3%B3n%20de%20Globanzer%20POS" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+              Escríbenos por WhatsApp
+            </a>
+          </div>
+        </section>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="" width="36" height="36" loading="lazy"><span>Globanzer <b>POS</b></span></a>
+        <p>Tu negocio, a un mensaje de distancia.</p>
+      </div>
+      <ul class="footer-contact">
+        <li>WhatsApp: <a href="https://wa.me/584245927067" target="_blank" rel="noopener">+58 424-592 7067</a></li>
+        <li>Correo: <a href="mailto:pos@globanzer.com">pos@globanzer.com</a></li>
+        <li><a href="terminos.html">Términos del servicio</a> · <a href="privacidad.html">Política de privacidad</a></li>
+      </ul>
+    </div>
+    <div class="wrap legal">
+      <p>© 2026 Globanzer POS · Registered office: 111 N Orange Ave, Suite 800, Orlando, FL 32801</p>
+    </div>
+  </footer>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 004.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm.01 18.15h-.01a8.23 8.23 0 01-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 01-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 012.41 5.83c0 4.54-3.7 8.22-8.23 8.22zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></symbol>
+  </svg>
+
+  <script src="assets/js/ficha.js" defer></script>
+</body>
+</html>
