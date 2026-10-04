@@ -729,3 +729,7 @@ input[type="date"].input { color-scheme: dark; }
 @media (min-width: 560px) { .form-alert .btn { width: auto; } }
 .q.field > label { color: #fff; font-weight: 700; font-size: 1rem; }
 .q > label.opt { display: flex; margin-bottom: 0; color: #e6e8ec; font-weight: 600; }
+
+/* Libertad (dueño de vacaciones) */
+.freedom .photo-bg img { object-position: 35% 40%; }
+@media (min-width: 900px) { .freedom .photo-bg img { object-position: 25% 50%; } }
