@@ -733,3 +733,6 @@ input[type="date"].input { color-scheme: dark; }
 /* Libertad (dueño de vacaciones) */
 .freedom .photo-bg img { object-position: 35% 40%; }
 @media (min-width: 900px) { .freedom .photo-bg img { object-position: 25% 50%; } }
+/* Portada: tienda mediana (dueño a la derecha) */
+.hero .photo-bg img { object-position: 68% 35%; }
+@media (min-width: 900px) { .hero .photo-bg img { object-position: 60% 40%; } }
