@@ -122,7 +122,6 @@
   /* ---------- Validación ---------- */
   var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
   var RIF = /^[VEJPGC][-\s.]?\d{5,9}[-\s.]?\d?$/i;
-  var DISCORD = /^@?[A-Za-z0-9_.]{2,32}(#\d{4})?$/;
 
   function val(id) { var el = document.getElementById(id); return el ? el.value.trim() : ""; }
   function digits(s) { return (s.match(/\d/g) || []).length; }
@@ -136,8 +135,7 @@
     { id: "correo_negocio", label: "Correo del negocio", msg: "Escribe el correo del negocio.", test: function (v) { return EMAIL.test(v); }, bad: "Revisa el correo del negocio (ej.: tienda@correo.com)." },
     { id: "dueno_nombre", label: "Nombre del dueño", msg: "Escribe el nombre completo del dueño." },
     { id: "dueno_telefono", label: "Teléfono del dueño", msg: "Escribe el teléfono del dueño.", test: function (v) { return digits(v) >= 7 && digits(v) <= 15; }, bad: "Revisa el teléfono del dueño (ej.: 0414-1234567)." },
-    { id: "dueno_correo", label: "Correo del dueño", msg: "Escribe el correo del dueño.", test: function (v) { return EMAIL.test(v); }, bad: "Revisa el correo del dueño (ej.: nombre@correo.com)." },
-    { id: "dueno_discord", label: "Usuario de Discord", msg: "Escribe tu usuario de Discord.", test: function (v) { return DISCORD.test(v); }, bad: "Revisa el usuario de Discord: solo letras, números, punto o guion bajo (ej.: repuestos.juan)." }
+    { id: "dueno_correo", label: "Correo del dueño", msg: "Escribe el correo del dueño.", test: function (v) { return EMAIL.test(v); }, bad: "Revisa el correo del dueño (ej.: nombre@correo.com)." }
   ];
 
   function setError(el, errEl, msg) {
@@ -272,10 +270,7 @@
       return {
         nombre: $('[data-k="nombre"]', row).value.trim(),
         correo: $('[data-k="correo"]', row).value.trim(),
-        caja: $('[data-k="caja"]', row).value.trim(),
-        anular: $('[data-k="anular"]', row).checked,
-        descuentos: $('[data-k="descuentos"]', row).checked,
-        cerrar: $('[data-k="cerrar"]', row).checked
+        caja: $('[data-k="caja"]', row).value.trim()
       };
     }).filter(function (c) { return c.nombre || c.correo || c.caja; });
     data.turnstile_token = turnstileToken();

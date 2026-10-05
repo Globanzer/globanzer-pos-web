@@ -53,10 +53,8 @@ const SECTIONS = [
       ["dueno_nombre", "12. Dueño: nombre", 120],
       ["dueno_telefono", "12. Dueño: teléfono", 30],
       ["dueno_correo", "12. Dueño: correo (acceso)", 120],
-      ["dueno_discord", "12. Dueño: usuario de Discord", 40],
       ["otra_persona", "13. ¿Otra persona hablará con el asistente?", 10],
       ["otra_nombre_telefono", "13. Nombre y teléfono", 160],
-      ["otra_discord", "13. Usuario de Discord", 40],
       ["otra_nivel", "13. Nivel", 60],
       ["cajeros", "14. Cajeros", 0],
     ],
@@ -116,8 +114,10 @@ const SECTIONS = [
 const BOOLEAN_KEYS = new Set(["respaldo_riesgo", "uso_asistente", "seguridad", "declaracion"]);
 const REQUIRED_TEXT = [
   "razon_social", "rif", "nombre_comercial", "direccion", "telefono_negocio", "correo_negocio",
-  "dueno_nombre", "dueno_telefono", "dueno_correo", "dueno_discord",
+  "dueno_nombre", "dueno_telefono", "dueno_correo",
 ];
+// Campos que ya no se piden (el usuario de Discord lo gestiona Globanzer POS y los
+// permisos de cajero se configuran aparte). Si un cliente viejo los envía, se ignoran.
 
 /* ---------------- utilidades ---------------- */
 
@@ -169,9 +169,6 @@ function normalize(raw) {
       nombre: clean(c.nombre, 120),
       correo: clean(c.correo, 120),
       caja: clean(c.caja, 60),
-      anular: c.anular === true,
-      descuentos: c.descuentos === true,
-      cerrar: c.cerrar === true,
     }))
     .filter((c) => c.nombre || c.correo || c.caja);
   return out;
@@ -197,8 +194,7 @@ function display(key, value) {
 }
 
 function cajeroLine(c, i) {
-  const perms = [c.anular && "anular ventas", c.descuentos && "descuentos", c.cerrar && "cerrar caja"].filter(Boolean);
-  return `${i + 1}) ${c.nombre || "(sin nombre)"} · ${c.correo || "(sin correo)"} · caja: ${c.caja || "-"} · puede: ${perms.length ? perms.join(", ") : "ninguno"}`;
+  return `${i + 1}) ${c.nombre || "(sin nombre)"} · ${c.correo || "(sin correo)"} · caja: ${c.caja || "-"}`;
 }
 
 /** Secciones como pares [etiqueta, valor] (solo con valor). */

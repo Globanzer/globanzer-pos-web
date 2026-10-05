@@ -181,11 +181,7 @@
                   <span class="err" id="dueno_correo-err"></span>
                 </div>
               </div>
-              <div class="field">
-                <label for="dueno_discord">Usuario de Discord<span class="req-mark" aria-hidden="true">*</span></label>
-                <input class="input" id="dueno_discord" name="dueno_discord" type="text" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="40" required aria-describedby="dueno_discord-err">
-                <span class="err" id="dueno_discord-err"></span>
-              </div>
+              <p class="hint" style="margin-top:.75rem">Te enviamos por WhatsApp el enlace para entrar a tu canal de Discord. Solo descargas Discord en tu teléfono y entras; nosotros dejamos todo configurado.</p>
             </div>
             <fieldset class="q">
               <legend><span class="qn">13.</span>¿Otra persona hablará con el asistente?</legend>
@@ -198,10 +194,6 @@
                   <label for="otra_nombre_telefono">Nombre y teléfono</label>
                   <input class="input" id="otra_nombre_telefono" name="otra_nombre_telefono" type="text" maxlength="160">
                 </div>
-                <div class="field">
-                  <label for="otra_discord">Usuario de Discord</label>
-                  <input class="input" id="otra_discord" name="otra_discord" type="text" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="40">
-                </div>
                 <fieldset class="field" style="border:0;padding:0;margin-inline:0">
                   <legend style="font-weight:600;color:var(--muted);font-size:.95rem;margin-bottom:.4rem;padding:0">Nivel</legend>
                   <div class="opts stack">
@@ -212,8 +204,9 @@
               </div>
             </fieldset>
             <div class="q">
-              <span class="q-label" id="q14"><span class="qn">14.</span>Cajeros: nombre, correo, caja y qué puede hacer</span>
+              <span class="q-label" id="q14"><span class="qn">14.</span>Cajeros: nombre, correo y caja</span>
               <span class="hint">Puedes agregar hasta 6 cajeros.</span>
+              <p class="hint">Los cajeros cobran en su caja. Anular ventas, aplicar descuentos y cerrar la caja lo haces tú desde tu asistente Banzi. Si más adelante quieres darle alguno de esos permisos a un cajero, nos lo pides y lo configuramos.</p>
               <div class="cashiers" id="cashiers"></div>
               <button type="button" class="btn btn-ghost btn-sm add-btn" id="add-cashier">+ Agregar cajero</button>
               <template id="cashier-tpl">
@@ -233,12 +226,6 @@
                   <div class="field">
                     <label data-for="caja">Caja</label>
                     <input class="input" data-k="caja" type="text" maxlength="60" placeholder="Ej.: Mostrador 1" autocomplete="off">
-                  </div>
-                  <p class="perm-title">Puede:</p>
-                  <div class="opts">
-                    <label class="opt"><input type="checkbox" data-k="anular">Anular ventas</label>
-                    <label class="opt"><input type="checkbox" data-k="descuentos">Dar descuentos en caja</label>
-                    <label class="opt"><input type="checkbox" data-k="cerrar">Cerrar la caja</label>
                   </div>
                   <button type="button" class="link-btn" data-remove>Quitar este cajero</button>
                 </fieldset>
